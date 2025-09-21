@@ -6,7 +6,7 @@ const { saveUserFile, getUserFiles } = require('../models/userModel.js');
 const fs = require('fs');
 
 router.get('/', authMiddleware, (req, res) => {
-  res.sendFile('dashboard.html', { root: './views' });
+  res.sendFile('dashboard.html', { root: path.join(__dirname, '../views') });
 });
 
 
